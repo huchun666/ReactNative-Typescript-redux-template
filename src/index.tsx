@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { applyMiddleware, createStore } from "redux";
 import { Provider } from "react-redux";
-import AppContainer from "./containers";
+import AppContainer from "./containers/app";
 import rootReducer from "./redux/reducers";
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunkMiddleware from 'redux-thunk';
@@ -18,7 +18,7 @@ export default class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <AppContainer testInterface="testaaa"/>
+        <AppContainer/>
       </Provider>
     );
   }
