@@ -9,7 +9,8 @@ const AppNavigator = createStackNavigator(
 		Details: DetailsScreen
 	},
 	{
-		initialRouteName: "Home"
+		initialRouteName: "Home",
+		mode: 'modal',
 	}
 );
 
