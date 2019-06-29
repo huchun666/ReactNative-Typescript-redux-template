@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button, TextInput, StyleSheet } from 'react-native';
 
 class DetailsScreen extends React.Component<any, {}> {
     static navigationOptions = {
@@ -15,9 +15,21 @@ class DetailsScreen extends React.Component<any, {}> {
                 <Text>Details Screen</Text>
                 <Text>itemId: {JSON.stringify(itemId)}</Text>
                 <Text>otherParam: {JSON.stringify(otherParam)}</Text>
+                <Button title="goBack" onPress={() => navigation.goBack('HomeScreen')}/>
+                <TextInput style={styles.input} onChangeText={text => {
+                    navigation.setParams({title: text})
+                }}/>
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    input: {
+        width: 200,
+        height: 50,
+        borderWidth: 1
+    }
+})
 
 export default DetailsScreen;
