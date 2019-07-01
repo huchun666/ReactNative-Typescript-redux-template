@@ -4,6 +4,7 @@ import HomeScreen from "./home";
 import DetailsScreen from "./details";
 import Flex from './flex';
 import Test from "./test";
+import FlatListScreen from './FlatListScreen'
 import { Button, Platform, SafeAreaView, ScrollView } from "react-native";
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -207,6 +208,12 @@ const AppNavigator = createStackNavigator(
 			screen: MyDrawerNavigator,
 			navigationOptions: {
 				title: 'MyDrawerNavigator'
+			}
+		},
+		FlatListScreen: {
+			screen: FlatListScreen,
+			navigationOptions: {
+				title: 'FlatListScreen'
 			}
 		}
 	}

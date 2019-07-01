@@ -37,6 +37,10 @@ class HomeScreen extends React.Component<any, {}> {
                     title="Go to MyDrawerNavigator!"
                     onPress={() => this.props.navigation.navigate('MyDrawerNavigator')}
                 />
+                <Button
+                    title="Go to FlatListScreen!"
+                    onPress={() => this.props.navigation.navigate('FlatListScreen')}
+                />
                 <FlexDirectionBasics />
             </View>
         );
